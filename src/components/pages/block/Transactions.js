@@ -60,7 +60,6 @@ class TransactionsDisplay extends React.Component {
             // Needed in case ETH amount > 1000
             let value = new BigNumber(transaction.value)
             value = value.toFormat()
-            value = value.split(',').join('')
 
             data.push({
                 key: transaction.index,
@@ -82,6 +81,12 @@ class TransactionsDisplay extends React.Component {
         )
     }
 }
+
+BigNumber.config({
+    FORMAT: {
+        decimalSeparator: ''
+    }
+})
 
 export default TransactionsDisplay;
 

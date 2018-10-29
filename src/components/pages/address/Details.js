@@ -53,7 +53,6 @@ class DetailsDisplay extends React.Component {
         // Needed in case ETH amount > 1000
         let balance = new BigNumber(addressData.balance)
         balance = balance.toFormat()
-        balance = balance.split(',').join('')
 
         const simpleData = [{
             key: 0,
@@ -78,5 +77,11 @@ class DetailsDisplay extends React.Component {
         )
     }
 }
+
+BigNumber.config({
+    FORMAT: {
+        decimalSeparator: ''
+    }
+})
 
 export default DetailsDisplay;

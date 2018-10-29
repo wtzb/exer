@@ -61,7 +61,6 @@ class RecentTransactions extends React.Component {
                         // Needed in case ETH amount > 1000
                         let value = new BigNumber(transaction.value)
                         value = value.toFormat()
-                        value = value.split(',').join('')
 
                         tableData.push({
                             key: transaction.index,
@@ -81,5 +80,11 @@ class RecentTransactions extends React.Component {
         )
     }
 }
+
+BigNumber.config({
+    FORMAT: {
+        decimalSeparator: ''
+    }
+})
 
 export default RecentTransactions;
