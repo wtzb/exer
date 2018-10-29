@@ -51,6 +51,7 @@ class DetailsDisplay extends React.Component {
         const addressData = this.props.addressData;
 
         // Needed in case ETH amount > 1000
+        BigNumber.config({ FORMAT: {decimalSeparator: ''} })
         let balance = new BigNumber(addressData.balance)
         balance = balance.toFormat()
 
@@ -77,11 +78,5 @@ class DetailsDisplay extends React.Component {
         )
     }
 }
-
-BigNumber.config({
-    FORMAT: {
-        decimalSeparator: ''
-    }
-})
 
 export default DetailsDisplay;

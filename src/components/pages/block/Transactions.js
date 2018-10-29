@@ -58,6 +58,7 @@ class TransactionsDisplay extends React.Component {
 
         this.props.blockData.transactions.map(transaction => {
             // Needed in case ETH amount > 1000
+            BigNumber.config({ FORMAT: {decimalSeparator: ''} })
             let value = new BigNumber(transaction.value)
             value = value.toFormat()
 
@@ -81,12 +82,6 @@ class TransactionsDisplay extends React.Component {
         )
     }
 }
-
-BigNumber.config({
-    FORMAT: {
-        decimalSeparator: ''
-    }
-})
 
 export default TransactionsDisplay;
 

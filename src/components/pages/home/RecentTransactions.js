@@ -59,6 +59,7 @@ class RecentTransactions extends React.Component {
 
                     data.block.transactions.slice(0).reverse().map(transaction => {
                         // Needed in case ETH amount > 1000
+                        BigNumber.config({ FORMAT: {decimalSeparator: ''} })
                         let value = new BigNumber(transaction.value)
                         value = value.toFormat()
 
@@ -80,11 +81,5 @@ class RecentTransactions extends React.Component {
         )
     }
 }
-
-BigNumber.config({
-    FORMAT: {
-        decimalSeparator: ''
-    }
-})
 
 export default RecentTransactions;
