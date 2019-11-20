@@ -1,3 +1,5 @@
+Nov 2019 note: this project is currently unmaintained, and the domain is no longer registered by me. You can still visit the latest deployment at [exer.netlify.com](https://exer.netlify.com/).
+
 # Exer
 
 [Exer](https://exer.io/) is an open-source block explorer for Ethereum and Ethereum-like networks. It's made using [React](https://reactjs.org/) and retrieves its data using [EthQL](https://github.com/ConsenSys/ethql). You can access the live site by visiting [exer.io](https://exer.io/).
